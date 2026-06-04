@@ -1,0 +1,29 @@
+{
+  "name": "@cli-web-terminal/server",
+  "version": "0.0.1",
+  "private": true,
+  "description": "汎用 PTY ブリッジ + 短期 token + Origin allowlist + セッション数キャップ。Docker コンテナ内で node-pty 経由のターミナルを WebSocket で配信するための primitive を提供する。",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "types": "./src/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.mts",
+      "import": "./src/index.mjs"
+    }
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "node-pty": "^1.0.0",
+    "ws": "^8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "node-pty": { "optional": true }
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}
