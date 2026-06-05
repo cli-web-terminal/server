@@ -14,8 +14,12 @@
   },
   "files": [
     "src",
+    "scripts",
     "README.md"
   ],
+  "scripts": {
+    "postinstall": "node scripts/fix-node-pty-perms.mjs"
+  },
   "peerDependencies": {
     "node-pty": "^1.0.0",
     "ws": "^8.0.0"
